@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Medical Care</title>
+    <link rel="stylesheet" href="med.css">
+</head>
+<body>
+
+<header>
+    <h1>Smart Medical Care System</h1>
+    <p>Innovative Frontend Medical Website</p>
+</header>
+
+<!-- Role Selection -->
+<section id="role">
+    <h2>Select Your Role</h2>
+    <button onclick="showPatient()">Patient</button>
+    <button onclick="showDoctor()">Doctor</button>
+</section>
+
+<!-- Patient Dashboard -->
+<section id="patient" class="hidden">
+    <h2>Patient Dashboard</h2>
+
+    <!-- Appointment -->
+    <h3>Book Appointment</h3>
+    <input type="text" id="pname" placeholder="Patient Name">
+    <select id="doctor">
+        <option value="">Select Doctor</option>
+        <option>Cardiologist</option>
+        <option>Dentist</option>
+        <option>Physician</option>
+    </select>
+
+    <select id="time">
+        <option value="">Select Time</option>
+        <option>10 AM</option>
+        <option>12 PM</option>
+        <option>4 PM</option>
+    </select>
+
+    <button onclick="book()">Book</button>
+
+    <!-- Symptom Checker -->
+    <h3>Symptom Checker</h3>
+    <input type="checkbox" id="fever"> Fever
+    <input type="checkbox" id="cough"> Cough
+    <input type="checkbox" id="pain"> Chest Pain
+    <br><br>
+    <button onclick="checkSymptom()">Check</button>
+    <p id="result"></p>
+</section>
+
+<!-- Doctor Dashboard -->
+<section id="doctorDash" class="hidden">
+    <h2>Doctor Dashboard</h2>
+    <p id="appointments"></p>
+</section>
+
+<!-- Health Tips -->
+<section>
+    <h2>Daily Health Tip</h2>
+    <p id="tip"></p>
+</section>
+
+<footer>
+    <p>© 2026 Smart Medical Care | Frontend Project</p>
+</footer>
+
+<script src="med.js"></script>
+</body>
+</html>
